@@ -1,0 +1,4 @@
+
+1.What is React.createElement return?
+
+2.what role render() plays in React?
