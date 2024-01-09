@@ -1,0 +1,89 @@
+1.what is jsx?
+
+    * jsx is not HTML inside js
+
+    * jsx is HTML like syntax
+
+    * jsx is created to replace React.createElement to make more easy syntax
+
+    * jsx is also an React Object
+
+    * jsx is not valid js(because jsx won't understand by jsEngine)
+
+    * jsx and React are not the same they both are different
+
+    * jsx makes react code more Readable
+
+
+2. what happens inside React.createElement vs JSX?
+
+    a.React.createElement
+
+        * React.createElement => 
+                ReactELement(js object)=> 
+                        HTML Element (render);
+
+    b.JSX
+
+        * jsxHeading => 
+                React.creatElement(transpiles by babel inside Parcel)=> 
+                        ReactElement(js object)=>
+                                HTML ELement(render);
+
+
+3.what is root.render() do in react?
+
+    * It will convert all the react element into DOM Elements.
+
+    * After that it will replace all the previous DOM Element inside root with new React Element.
+
+
+4.How to add attributes to jsx?
+
+    * To use camelCase syntax.
+
+
+5.How to write jsx in multiple line?
+
+    * wrap the jsx code inside ( ) to make a multiple line jsx!
+
+6.What are components in react?
+
+    * Functional Component => Regular js funtions that returns jsx (react element)
+
+7.what is component composition in react?
+
+    * composing two components to one and another!
+    (writing one component inside another component is called component composition)
+
+8.How to write js inside jsx?
+
+    * inside this curly ->{}
+
+9.Benefits of jsx?
+
+    * sanitize the data we pass.
+    * prevent malicious attacks
+    * helps to write react elements or variables inside Html
+    * jsx makes react code Readable
+
+10.Difference b/w <Title></Title> , <Title/> and {TItle()}?
+
+
+11.Fundmental understand!!
+
+    1.React --> js Library
+
+    2. React.createElement --> js Object
+
+    3.ReactDOM.createRoot  --> creates DOM
+
+    4.root.render()  ---> convert js object into DOM elements
+
+    5.jsx  --> React.createElement (converted by babel and managed by parcel before it reached browser)
+
+    6.component --> js Function that return piece of jsx or React Element.
+
+    7.To write js variables, functions etc --> use it inside {}
+
+Home work? --> try more html tags in jsx!
