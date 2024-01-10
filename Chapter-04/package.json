@@ -1,0 +1,34 @@
+{
+  "name": "chapter-04",
+  "version": "1.0.0",
+  "description": "Chapter 04 of Namaste React",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Athul-Kumar/Namaste-React18.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Athul kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Athul-Kumar/Namaste-React18/issues"
+  },
+  "homepage": "https://github.com/Athul-Kumar/Namaste-React18#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 4 versions"
+  ]
+}
