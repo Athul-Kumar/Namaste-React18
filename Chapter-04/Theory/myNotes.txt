@@ -1,0 +1,44 @@
+1.what is props?
+
+    * properties that passed into component
+
+    * Basically arguments that passed to functions
+
+2.what is config driven UI?
+
+    * controlling UI using config driven data that coming from Backend
+
+3.why Need to use unique keys in map ?
+
+    * if we have many components in same level inside a container
+    * if we don't put unique keys then whenever new component added or removed
+    * react will re-render all the component inside container 
+    * it will lead to optimisation problems 
+
+
+4.why not recommend to  use index as a key?
+
+    1.Performance Issues due to unnecessary re-renders.
+
+    2.Issues in data mapping in case list items are sorted, filtered, or deleted.
+
+5.When is it safe to use index as key in a list?
+
+    1.Data is static.
+    2.When you know reordering of lists: Sorting, Filtering is not going to happen.
+    3.In the absence of an id.
+
+6.imp concepts!
+* React Virtual DOM: 
+    It's a lightweight representation of actual DOM, stored in memory and is never rendered.
+
+* Reconciliation in React: 
+    The process of syncing Virtual DOM with the real DOM.
+
+* Diffing Algorithm: 
+    The algorithm to find the minimum number of steps needed to update the real DOM.
+
+* Assumptions for using the Diffing Algorithm:
+    Two elements of different types will produce different trees.
+    The developer can hint at which child elements may be stable across different renders with a key attribute.
+
