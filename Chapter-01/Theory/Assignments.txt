@@ -1,16 +1,59 @@
 
 1.What is Emmet?
 
+Emmet is a web tool used to right boilerplate code of HTML and css with the help of abbreviations.
+
 2.Difference between a Library and Framework?
+
+Library and Framework both are created to make software development lifecycle easy!
+
+a.Library --> provides collection of functions or code snippets to use on our need without
+              worring about flow of the program or architecture of the App.
+
+b.Framework --> provides collection of functions or code snippets to use on our need but we have
+                to follow certain rules that won't affect the flow of the program or architecture
+                of the App.
 
 3.What is CDN? Why do we use it?
 
+    CDN's are content Delivery Network that hosted on cloud networks.we can access these by using
+    scripts by including these scripts in our program.
+
 4. Why is React known as React?
+
+    React is a js Library that builds UI.
+    It gets it's by the Reactive nature 
+    React follows Declarative programming
+    to change UI we need to explain it to react via components and react will automatically
+    make changes according to the components
 
 5.What is crossorigin in script tag?
 
+    crossorigin is an attribute used to prevent malicious attacks.
+
 6.What is diference between React and ReactDOM?
 
+Both are core of React Library
+
+    React 
+
+    1.mainly focus on Logic and UI building
+    2.It creates components , edit components and take care of component lifecycle
+
+    ReactDOM
+    1.mainly focus on Document Object Model
+    2.It connects react with browser DOM to create Virtual DOM
+
 7.What is difference between react.development.js and react.production.js files via CDN?
+
+    development
+    1.Not optimised or minified files
+    2.created to make development easy
+    3.It supports Error handling and other features
+
+    production
+    1.well optimized and minified files
+    2.Created to make production easy
+    3.It doesn't have any support system for Development.
 
 8.What is async and defer?

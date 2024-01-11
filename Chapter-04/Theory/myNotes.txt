@@ -42,3 +42,11 @@
     Two elements of different types will produce different trees.
     The developer can hint at which child elements may be stable across different renders with a key attribute.
 
+
+Interview?
+
+● What is Virtual DOM?
+● What is Reconciliation in React?
+● What is React Fiber?
+● Why we need keys in React? When do we need keys in React?
+● Can we use index as keys in React?
