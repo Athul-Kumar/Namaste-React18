@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
+import resDataList from "./utils/mockData";
 import HeaderComponent from "./components/HeaderComponent";
 import BodyComponent from "./components/BodyComponent";
-import resDataList from "./utils/mockData";
+
 
 
 
@@ -12,7 +12,7 @@ const AppLayout = ()=>{
     return (
       <div className="Applayout">
         <HeaderComponent />
-        <BodyComponent resDataList={resDataList}/>
+        <BodyComponent resDataList = {resDataList}/>
       </div>
     );
 }

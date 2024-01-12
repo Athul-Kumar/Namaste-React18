@@ -4,3 +4,18 @@
 2.React folder structure?
 
 https://blog.webdevsimplified.com/2022-07/react-folder-structure/
+
+
+3.What is React Hooks?
+
+4.Why react is super fast?
+
+5.What is Reconciliation in react?
+
+6.What is react Dom?
+
+7.What is re-render in react?
+
+8.What is diff algorithm in React?
+
+9.What is React fiber?
