@@ -1,0 +1,6 @@
+
+1.Is it possible to default export and named export in a single file?
+
+2.React folder structure?
+
+https://blog.webdevsimplified.com/2022-07/react-folder-structure/
