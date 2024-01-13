@@ -1,5 +1,6 @@
 
 1.Is it possible to default export and named export in a single file?
+yes it is possible
 
 2.React folder structure?
 
@@ -8,14 +9,38 @@ https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 
 3.What is React Hooks?
 
+ It's a js utility function with set of pre-defined rules written in it.
+
 4.Why react is super fast?
+
+    * React does efficient DOM manipulation with the Help of VDOM
+    * Whenever the State changes VDom will find the difference b/w previous VDOM and Current VDOM
+    * Using Diff algorithm and it will update the difference
+    * VDOM will re-render the component and update UI
 
 5.What is Reconciliation in react?
 
-6.What is react Dom?
+It's a algorithm react used for efficent dom manipulation from react 16 it known as react fiber
+
+6.What is react VDom?
+
+    * It's a representation of actual dom
+    * js object
+    * don't have any direct link to actual dom
 
 7.What is re-render in react?
 
+    * updation of ui based on the change in the data
+
 8.What is diff algorithm in React?
 
+    * finding the difference b/w two VDOm and updating the difference
+
 9.What is React fiber?
+
+    * It the ongoing algorithm that  React use for efficent DOM manipulation.
+
+    * react fiber is a new way of finding diff b/w VDOM's and updating the VDOM
+
+    * react fiber uses incremental rendering principle for the working
+

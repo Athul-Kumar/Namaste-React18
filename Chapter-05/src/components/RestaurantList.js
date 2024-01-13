@@ -5,7 +5,6 @@ import RestaurantCard from "./RestaurantCard";
 const RestaurantList =(props)=>{
 
   const {resDataList} = props;
-
     return (
       <div className="resListContainer">
         {resDataList.map((resData) => (

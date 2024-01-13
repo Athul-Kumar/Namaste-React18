@@ -48,8 +48,15 @@ html,body{
 .Body-Container{
 
     padding:50px;
+   
 }
 
+.filter-Container{
+
+    display: flex;
+    gap:20px;
+
+}
 .res-card{
 
     width: 250px;
