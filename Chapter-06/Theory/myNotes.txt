@@ -1,0 +1,88 @@
+
+1.What is Monolithic architecture ?
+
+    - components of an application are tightly integrated into a single codebase
+        and deployed as a single unit.
+
+    - UI, Business Logic, data layers are combined in a single respos.
+
+    - Have issues with scalability
+    
+
+2.what is Microservices architecture ?
+
+    - components of an application are loosly coupled and integrated into different codebase also
+        
+    - Each component have its own specific ports for working
+
+    - UI, BUsiness Logic, data layers have different respos
+
+    - Have no issues with scalability
+
+
+3.What is Separation of concerns ?
+
+    - It's a design principle that encourages to divide a program into distinct and independent modules or components.
+
+
+4.what is Single Responsibility Principle (SRP)?
+
+    - SRP is one of SOLID principles of OOPS Design!
+
+    - SRP states that a class should have only one reason to change, meaning that a class should have only one responsibility.
+
+5.How microservices interact each other?
+    - Microservices interact each other through well written API's
+    - Each service is run own different ports
+
+6.What are the two different approch to render the backend api data in UI?
+
+    Two ways we can render data in UI
+
+    1. Page Loads --> API fetch from BE ---> Render in UI
+
+    2. Page Loads ---> Renders dummy UI ---> API fetch from BE ---> Re-Renders API data in UI
+
+    In react and for Better UX it preferce to use 2nd approch!
+
+
+
+7.Purpose of useEffect() Hook?
+
+    - To render something after the rendering of a component
+
+8.What is conditional rendering?
+
+    - rendering something according to the basis of condition
+
+9.what is rendering the component?
+
+    calling the component is called rendering the component!
+
+10.why and how we need to use state local variables in react rather than normal js local variables?
+
+11. How the const state variable in useState can assign different value?
+
+12.Is the whole component re-renders or the specific part inside the component re-renders?
+
+13.Definition of react state variable?
+
+    - whenever state variable updates react triggers the reconciliation cycle or it re-renders the components
+
+
+Videos for Learning
+
+* watch async await namaste js
+* cors video of akshay
+* Learn about optional chaining in js
+
+
+
+summary of episode 6
+
+1.fetch data from swiggy
+2.use useEffect to manage it
+3.create shimmer uI
+4.conditional rendering of shimmer UI
+5.login, log out functionality,
+6.filter the data.

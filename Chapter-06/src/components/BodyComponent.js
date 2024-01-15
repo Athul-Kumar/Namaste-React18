@@ -1,12 +1,38 @@
-import { useState } from "react";
-import resDataList from "../utils/mockData";
+import { useState, useEffect } from "react";
 import RestaurantList from "./RestaurantList";
+import ShimmerUI from "./Shimmer";
 
 const BodyComponent = (props) => {
   const { resDataList } = props;
+  const [listOfRestaurant, setListOfRestaurant] = useState([]);
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
   const [inputText, setInputText] = useState("");
-  const [listOfRestaurant, setListOfRestaurant] = useState(resDataList);
+
+  console.log(listOfRestaurant);
+  console.log(filteredRestaurant);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.9816358&lng=76.2998842&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+
+    const json = await data.json();
+
+    setListOfRestaurant(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+
+    setFilteredRestaurant(
+      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+    );
+  };
+  
+
 
   return (
     <div className="Body-Container">
@@ -22,23 +48,29 @@ const BodyComponent = (props) => {
         />
         <button
           onClick={() => {
-            const filterRestaurant = listOfRestaurant.filter((rest) =>
+            const filteredRestaurant = listOfRestaurant.filter((rest) =>
               rest.info.name.toLowerCase().includes(inputText.toLowerCase())
             );
-
-            setListOfRestaurant(filterRestaurant);
+            setFilteredRestaurant(filteredRestaurant);
           }}
         >
-          Search Restaurant
+          Search
         </button>
 
-        <button onClick={()=>{
-            const filterRating = listOfRestaurant.filter((rest)=> rest.info.avgRating> 4.2);
-            setListOfRestaurant(filterRating);
-        }}>Top Rated</button>
-      </div>
+        <button
+          onClick={() => {
+            const filteredRatings = listOfRestaurant.filter(
+              (rest) => rest.info.avgRating >= 4.5
+            );
 
-      <RestaurantList resDataList={listOfRestaurant} />
+            setFilteredRestaurant(filteredRatings);
+          }}
+        >
+          Top Rated
+        </button>
+      </div>
+      
+      <RestaurantList resDataList={filteredRestaurant} />
     </div>
   );
 };
