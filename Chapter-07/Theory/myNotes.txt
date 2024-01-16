@@ -1,0 +1,31 @@
+
+USEEFFECT HOOK
+
+    how react useEffect Hook works internally?
+
+    When is the useEffect is called?
+
+        1.if no dependency array
+            - After every component render!
+
+        2.if an empty dependency array is present
+            -  Only called on the initial rendering of the component (1 time call for useEffect)
+            - doesn't call useEffect even if the component re-renders again
+
+        3.If dependency array is present with local state variable
+
+            - Every time the local state variable updates useEffect will called!
+
+
+USESTATE HOOK
+
+    useState is used to create local state variables inside the functional components
+
+     whenever the local state variable updates the  whole component will also re-Renders
+
+    1.Best practices with useState?
+
+        - Never create useState outside the components
+        -  Try to call the useState on the top of the functional component
+        -  Never create useState inside conditionals, loops, functions other than component functions which creates inconsistency
+        -  
