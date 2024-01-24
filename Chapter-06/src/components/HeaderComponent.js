@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LOGO_URL } from "../utils/constants";
 
 const HeaderComponent = () => {
 
   const [authBtn, setAuthBtn] = useState("Log In");
 
+  console.log("header rendering");
+
+ useEffect(()=>{
+  console.log("use effect");
+ },[authBtn])
   return (
     <div className="Header">
       <img className="img" src={LOGO_URL} alt="" />
