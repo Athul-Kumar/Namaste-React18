@@ -1,0 +1,64 @@
+1.how useEffect works?
+
+    a.what is the use of useEffect hook?
+
+        -> To render something inside the component after the initial render of the component  
+            we use useEffect hook for that!
+
+    
+    b.useEffect behaviour in different senarios?
+
+        * useEffect without dependency array?
+
+            -> useEffect will render every single time after  the component renders
+        
+        * useEffect with empty dependency array?
+
+            -> useEffect only render one time after the Initial rendering of the component
+
+        * useEffect with dependency array?
+
+            -> useEffect will render everytime accoding to the change in dependecy array!
+
+
+    2. UseState hook?
+
+        1.use of useState hook?
+
+            -> used to create local state variable inside functional component to sync the 
+                data and ui layers in react
+
+        2.Best practices of useState Hook?
+
+            -> Never use useState hook outside of the functional component
+
+            -> call the hooks on the top of the functional component
+
+            -> never create usestate inside conditionals or loops will lead to inconsistency
+
+3.React -router -dom ?
+
+    1.createBrowserRouter --> for creating routes
+
+    2.RouterProvider --> for providing routes to the render files
+
+    3.useRouteError  ---> hook used for custom error messages
+
+    4.outlet --->
+
+    5.link --->
+
+    6.useParams ---> dynamic routes
+
+
+3.Single page application  --> In react everything is component.so whenever the page layout changes
+                                it actually changing the component not reloading the whole page for changes.
+                                via client side routing!
+
+
+4.Two types of routing in web applications
+
+    1.client side routing  --> when load the app for the first time all the code will be there.when another page should display
+                                it will load that component.No network call needed for different pages
+
+    2.server side routing  --> Make a network call and the page is coming from the server

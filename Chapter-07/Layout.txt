@@ -1,0 +1,25 @@
+
+
+Header section
+    - Logo
+    - Nav component
+        -Home
+        -contact
+        -log in /logout
+        -cart
+Body section
+    -Restaurant List
+        - Restaurant card
+            - Restaurant Img
+            - Restaurant Name
+            - Rating
+            - Delivery time
+            - place
+            - location
+            - cusines
+
+Footer section
+    - logo
+    - copyright
+    - contact links
+    
