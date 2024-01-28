@@ -31,6 +31,7 @@ const BodyComponent = () => {
  }
 
 
+  console.log(useState())
 
   return (
     <div className="body-containter">

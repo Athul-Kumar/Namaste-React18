@@ -1,0 +1,25 @@
+
+
+1.What are various ways to add images into our App? Explain with code examples?
+
+2.What would happen if we do console.log(useState())?
+
+    returns array of one value and one function
+
+3.How will useEffect behave if we don't add a dependency array ?
+
+    useEffect hook will re-renders every single time when the component renders
+
+4.What is SPA?
+
+    single page application is works on the  basis of client side routing.Basically means 
+    no network call will be maded for different pages to display
+
+5.What is difference between Client Side Routing and Server Side Routing?
+
+
+    client side --> whenever the pages need to display it will display from the pre defined component
+                    without reloading the createBrowserRouter
+
+    server side --> whenver the pages need to display it will display from the network call
+                    and the browser will reloads every single time.
