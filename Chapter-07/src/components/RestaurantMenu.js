@@ -20,6 +20,7 @@ const RestaurantMenu = () => {
    
 
     const json = await response.json();
+
     setResInfo(json.data)
   };
   
