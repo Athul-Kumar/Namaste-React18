@@ -1,0 +1,98 @@
+
+
+1.why should always write props inside super() in class based react component?
+
+2.Never update state variables directly in functional and class based components
+
+    1.functional --> setState(count+1);
+
+    2.class  ---> this.setState({
+
+        count:this.state.count+1
+    })
+
+these are the best way to update state.
+
+3.state updation in class based component behind the scene?
+
+    -in class based component state variables are defined inside a big object
+
+    - when we update state variable using this.state({}) it will take another big object
+    - only the specific portion of the state variable will be compared in these object using diff algo
+     after it will be updated
+
+
+4.React render cycle of class based components?
+
+
+    1.Instance of class component will be created
+
+    2. next Constructor of the class will be called 
+
+    3.Render will be called after constructor
+
+    4.Class based component now will be mounted on to the dom
+
+    5.After Mounted on to the dom it componentDidMount() will be called
+
+
+5.Parent class and child class component life-cycle for interview Order
+
+    1.Parent class Instance created
+    2.constructor of parent will be called
+    3.render of parent will be called
+    4.child class Instance created
+    5.constructor of child will be called
+    6.render of child will be called
+    7.child component did Mount called
+    8.parent component did Mount called
+
+6.Usecase of ComponentDidMount ?
+
+    1.To make API calls ---> Like useEffect first will render Shimmer UI then re-render component with API data.
+    
+
+
+7.React life cycle deep Dive! why is react faster?
+
+    React life cycle happends in two Phase
+
+        1.Render Phase --> Mounting will starts or happen and Constructor and render functions are called
+            In the render phase react reconciliation algorithm will work and finds the diff b/w two objects
+            Render phase is faster
+        2.Commit Phase --> React Dom will be updated and ComponentDidMount will be called
+
+            In the commit phase the diff will be updated to the react Vdom
+            commit phase is slower because Vdom updation happens in commit phase
+
+
+    All the render phase will be happen together
+    and all the commit phase will happend together in a batch
+
+
+            -Parent Constructor
+            -parent Render  
+                -Child Constructor
+                -Child Render
+                -Another Child constructor
+                -Another child Render
+            (render phase is finished(diff is calculated) - single batch render)
+
+            (commit phase-DOM Manipulation(dom is updated in single batch) -single batch commited)
+                -First child Mount
+                -Second child Mount
+                -parent Mount
+
+
+8.How to write clean up or unmount in useEffect?
+
+
+    useEffect(()=>{
+
+        return(()=>{
+
+            inside return we can write clean up or unmount 
+
+            {clean up is used for when the page will leave }
+        })
+    })

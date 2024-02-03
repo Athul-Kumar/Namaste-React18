@@ -7,6 +7,8 @@ const RestaurantList = (props) =>{
 
   const {restaurantList} = props;
 
+  console.log(restaurantList)
+
     return restaurantList?.length === 0 ? (
       <ShimmerUI />
     ) : (

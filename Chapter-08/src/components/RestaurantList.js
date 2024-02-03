@@ -6,11 +6,12 @@ import ShimmerUI from "./ShimmerUI";
 const RestaurantList = (props) => {
   const { restaurantList } = props;
 
+
   return restaurantList?.length === 0 ? (
     <ShimmerUI />
   ) : (
     <div className="res-list">
-      {restaurantList.map((restaurant) => (
+      {restaurantList?.map((restaurant) => (
         <Link
           to={"/restaurants/" + restaurant.info.id}
           key={restaurant.info.id}

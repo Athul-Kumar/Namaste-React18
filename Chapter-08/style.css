@@ -151,3 +151,33 @@ body{
 
     margin: 20px
 }
+
+.us-container{
+
+    width: auto;
+    /* background-color: red; */
+    margin: 50px auto;
+    padding: 50px;
+    align-items: center;
+}
+
+
+.about-container{
+
+    text-align: center;
+    margin-top: 25px;
+}
+
+.count-container{
+
+    width: auto;
+    height: 100px;
+
+}
+.count-container > button{
+
+    padding: 10px 5px;
+    border-radius: 10px;
+    background-color: black;
+    color: red;
+}

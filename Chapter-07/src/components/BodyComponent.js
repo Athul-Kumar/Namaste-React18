@@ -23,11 +23,11 @@ const BodyComponent = () => {
 
 
     setListOfRestaurants(
-      Data?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      Data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
 
     setFilteredRestaurants(
-      Data?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      Data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
  }
 

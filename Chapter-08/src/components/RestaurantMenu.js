@@ -10,7 +10,7 @@ const RestaurantMenu = () => {
 
   useEffect(() => {
     fetchMenu();
-  });
+  },[]);
 
   const fetchMenu = async () => {
     const response = await fetch(RESLIST_API + resId);
@@ -18,6 +18,7 @@ const RestaurantMenu = () => {
     const json = await response.json();
 
     setResInfo(json.data);
+    console.log(json.data)
   };
 
   if (resInfo === null) {

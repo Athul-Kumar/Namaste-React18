@@ -44,9 +44,9 @@
 
     3.useRouteError  ---> hook used for custom error messages
 
-    4.outlet --->
+    4.outlet ---> is for display random body component intact with fixed headers and footers
 
-    5.link --->
+    5.link ---> act as anchor tags but does't reloads the page
 
     6.useParams ---> dynamic routes
 
