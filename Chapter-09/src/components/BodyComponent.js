@@ -1,30 +1,45 @@
-import { useEffect, useState } from "react";
+import {useState,useEffect } from "react";
 import RestaurantList from "./RestaurantList";
+import { RESLIST_API } from "../utils/constants";
+// import useRestaurantList from "./utils/useRestaurantList";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const BodyComponent = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState([]);
-  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
-  const [inputText, setInputText] = useState("");
+   const [listOfRestaurants, setListOfRestaurants] = useState([]);
+   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+   const [inputText, setInputText] = useState("");
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+     useEffect(() => {
+       fetchRestlistData();
+     }, []);
 
-  const fetchData = async () => {
-    const response = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.9816358&lng=76.2998842&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-    const Data = await response.json();
+     const fetchRestlistData = async () => {
+       const reslistData = await fetch(RESLIST_API);
+       const json = await reslistData.json();
+      
+      
+       setListOfRestaurants(
+         json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+           ?.restaurants
+       );
 
-    setListOfRestaurants(
-      Data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+       setFilteredRestaurants(
+         json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+           ?.restaurants
+       );
+     };
 
-    setFilteredRestaurants(
-      Data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-  };
+  
+     const isOnline = useOnlineStatus();
+    if(isOnline === false){
 
+      return <h1>Check your Internet Connection Again</h1>
+    }
+
+  
+
+
+  
   return (
     <div className="body-containter">
       <div className="search-container">

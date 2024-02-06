@@ -5,7 +5,6 @@ import ShimmerUI from "./ShimmerUI";
 
 const RestaurantList = (props) => {
   const { restaurantList } = props;
-
   return restaurantList?.length === 0 ? (
     <ShimmerUI />
   ) : (

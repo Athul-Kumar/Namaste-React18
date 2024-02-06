@@ -1,0 +1,55 @@
+
+
+1.Single Responsibility Principle -->
+
+    -  Each component should only follow one task
+    - Don't do multiple things in a single component
+    - If you  have to do multiple things in a component then break it down to separate components
+
+    advantages of separate
+        - converting codes into moducles
+        - More readable, testable code will be generated
+        - Re-usablity of components
+        - component will be maintainable
+
+
+Custom Hooks --> If a component have more than one thing to do then we use custom hooks to
+                abstract that task and we do it in custom Hooks
+
+            1.In resutarantMenu component we fetch data and we display it 
+            2. this component do 2 tasks 
+            3.we can use custom hook to abstract the fetch data logic
+            4.Now the component only have to do display the data
+            5.By doing this if a bug arries we can easily find and solve
+
+                - If the bug in fetching data go and fix it in cutom hooks
+                - if the bug in displaying the data go and fix it in resutarantMenu component
+            
+            6. Always use one file for one custom hook
+            7.custom hook name should start in use and file also
+            8.Always put all custom hooks inside util folder
+
+
+    3.Optimizing react app for prodcution ready
+
+        - Break the app into smaller pieces
+        - Make a smaller bundles of the big bundler js file is called chunking or code splitting or lazy loading or Dynamic bundling or onDemand Loading
+
+4.Whys to optimize React projects
+
+    1.single Responsibility Principle ---> using custom Hooks
+
+        - If a single component have more than one task to do
+
+            -eg: if a component to fetch api data from api call and display the data in the same file then
+                 use the custom hook to fetch data and the component will only show the data
+
+    
+    2.Code splitting, lazy loading -- using lazy and suspense
+
+        - if your app have a bigger components means nested component structure like amazon, makeMyTrip etc
+
+        - split the components into smaller chunks
+
+            eg: for restaurants 1 chunk
+                for grocery 1 chunk
