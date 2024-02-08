@@ -36,10 +36,6 @@ const BodyComponent = () => {
       return <h1>Check your Internet Connection Again</h1>
     }
 
-  
-
-
-  
   return (
     <div className="body-containter">
       <div className="search-container">

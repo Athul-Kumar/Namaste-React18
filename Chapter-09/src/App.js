@@ -14,7 +14,6 @@ import ShimmerUI from "./components/ShimmerUI";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
-console.log(Grocery);
 const AppLayout = () => {
   return (
     <div>
