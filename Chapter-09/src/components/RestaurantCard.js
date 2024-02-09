@@ -13,8 +13,8 @@ const RestaurantCard = (props) => {
     sla,
   } = restaurantList?.info;
   return (
-    <div className="res-card">
-      <img src={RES_URL + cloudinaryImageId} alt="" />
+    <div className="m-4 p-4 w-[250px] rounded-lg hover:bg-gray-200 bg-blue-500">
+      <img className="rounded-lg" src={RES_URL + cloudinaryImageId} alt="" />
       <div className="card-items">
         <h3>{name}</h3>
         <h3>{costForTwo}</h3>

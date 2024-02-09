@@ -38,8 +38,9 @@ const BodyComponent = () => {
 
   return (
     <div className="body-containter">
-      <div className="search-container">
+      <div className="m-6 px-20">
         <input
+          className="w-2/4 border border-teal-600 rounded p-3"
           type="text"
           placeholder="Search restaurant"
           value={inputText}
@@ -48,6 +49,7 @@ const BodyComponent = () => {
           }}
         />
         <button
+          className="border border-teal-600  m-3 p-3 rounded-lg font-bold hover:bg-sky-500"
           onClick={() => {
             const searchedRest = listOfRestaurants.filter((restaurant) =>
               restaurant.info.name
@@ -60,6 +62,7 @@ const BodyComponent = () => {
           search Restaurant
         </button>
         <button
+          className="border border-teal-600 m-3 p-3 rounded-lg font-bold hover:bg-blue-500"
           onClick={() => {
             const topRatedRestaurants = listOfRestaurants.filter(
               (restaurant) => restaurant.info.avgRating > 4.5

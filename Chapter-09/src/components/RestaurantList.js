@@ -8,7 +8,7 @@ const RestaurantList = (props) => {
   return restaurantList?.length === 0 ? (
     <ShimmerUI />
   ) : (
-    <div className="res-list">
+    <div className="flex flex-wrap gap-3 mx-12">
       {restaurantList?.map((restaurant) => (
         <Link
           to={"/restaurants/" + restaurant.info.id}
