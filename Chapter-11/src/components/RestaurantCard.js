@@ -1,6 +1,11 @@
+
 import { RES_URL } from "../utils/constants";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 const RestaurantCard = (props) => {
   const { restaurantList } = props;
+
+  const {loggedInUser} = useContext(UserContext)
 
   const {
     name,
@@ -23,9 +28,25 @@ const RestaurantCard = (props) => {
         <h4>{cuisines.join(",")}</h4>
         <h5>{areaName}</h5>
         <h6>{locality}</h6>
+        <h2>{loggedInUser}</h2>
       </div>
     </div>
   );
 };
+
+
+// Higher order component
+export const rescardWithLabel = (RestaurantCard)=>{
+  return (props)=>{
+    return (
+      <div>
+        <label className="bg-zinc-800 text-zinc-50 absolute m-2 p-2 rounded-lg">
+          Best Offers Available Now!
+        </label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  }
+}
 
 export default RestaurantCard;

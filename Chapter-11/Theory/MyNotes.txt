@@ -1,0 +1,25 @@
+
+ 
+ Higher Order Components --> It's a function that takes a component as a input and Enhance
+                            the component and returns it back with additional Logics
+
+
+2 Layers in React
+
+    1.UI layer --> JSX
+    2.Data layer --> state, props, {} inside jsx etc
+
+
+3.Lifting state up ---> Taking state controls from child component and giving it to its parent
+                        so that parent can controll the child component
+
+
+4.uncontrolled component --> if a component have its own state and it controlls the state then its a uncontrolled component
+
+5.controlled component --> if a component state is controlled by its parent component then its a controlled component
+
+6.propsDrilling --> It's a process in which we pass props from a parent component to it's deep nested child component by passing the
+                    the same props to the components in between them
+
+
+7.contextApi ---> its kind of global place where data is kept and any child component can access it without props drilling

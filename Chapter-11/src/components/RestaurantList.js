@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard,{rescardWithLabel} from "./RestaurantCard";
 
 import ShimmerUI from "./ShimmerUI";
 
 const RestaurantList = (props) => {
   const { restaurantList } = props;
+
+  const RestaurantCardWithOffers = rescardWithLabel(RestaurantCard);
+
   return restaurantList?.length === 0 ? (
     <ShimmerUI />
   ) : (
@@ -14,7 +17,11 @@ const RestaurantList = (props) => {
           to={"/restaurants/" + restaurant.info.id}
           key={restaurant.info.id}
         >
-          <RestaurantCard restaurantList={restaurant} />
+          {restaurant.info.aggregatedDiscountInfoV3 ? (
+            <RestaurantCardWithOffers restaurantList={restaurant} />
+          ) : (
+            <RestaurantCard restaurantList={restaurant} />
+          )}
         </Link>
       ))}
     </div>

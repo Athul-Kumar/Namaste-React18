@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { IMG_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const HeaderComponent = () => {
   const [authBtn, setAuthBtn] = useState("Log In");
-
   const isOnline = useOnlineStatus();
+
+  const {loggedInUser} = useContext(UserContext);
+  console.log(loggedInUser);
 
   return (
     <div className="flex items-center justify-between px-4 bg-cyan-400">
@@ -43,6 +46,7 @@ const HeaderComponent = () => {
           >
             {authBtn}
           </button>
+          <li className="font-bold hover:text-slate-300">{loggedInUser}</li>
         </ul>
       </div>
     </div>

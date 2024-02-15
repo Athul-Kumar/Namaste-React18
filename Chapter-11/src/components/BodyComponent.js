@@ -9,6 +9,7 @@ const BodyComponent = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [inputText, setInputText] = useState("");
 
+ 
   useEffect(() => {
     fetchRestlistData();
   }, []);
