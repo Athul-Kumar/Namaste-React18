@@ -1,0 +1,38 @@
+{
+  "name": "chapter-12",
+  "version": "1.0.0",
+  "description": "Namaste React Chapter-12: Let's Build our Store",
+  "main": "App.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Athul-Kumar/Namaste-React18.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Athul Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Athul-Kumar/Namaste-React18/issues"
+  },
+  "homepage": "https://github.com/Athul-Kumar/Namaste-React18#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "postcss": "^8.4.35",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.1"
+  },
+  "browserslist": [
+    "last 4 versions"
+  ],
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0"
+  }
+}
