@@ -4,12 +4,16 @@ import HeaderComponent from "./components/HeaderComponent";
 import BodyComponent from "./components/BodyComponent";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Cart from "./components/Cart"
 import ShimmerUI from "./components/ShimmerUI";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
 import ShimmerUI from "./components/ShimmerUI";
 import UserContext from "./utils/UserContext";
+import {Provider} from 'react-redux';
+import cartStore from "./Redux/cartStore"
+
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
@@ -25,17 +29,15 @@ const AppLayout = () => {
     setUserName(data.name);
   }, []);
 
-  console.log(userName);
-
   return (
-    <UserContext.Provider value={{ loggedInUser: userName }}>
+    <Provider store={cartStore}>
       <div>
         <UserContext.Provider value={{ loggedInUser: "Amar" }}>
           <HeaderComponent />
         </UserContext.Provider>
         <Outlet />
       </div>
-    </UserContext.Provider>
+    </Provider>
   );
 };
 
@@ -56,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "/restaurants/:resId",

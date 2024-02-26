@@ -3,13 +3,21 @@ import { IMG_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
+
+
 
 const HeaderComponent = () => {
   const [authBtn, setAuthBtn] = useState("Log In");
   const isOnline = useOnlineStatus();
 
   const { loggedInUser } = useContext(UserContext);
-  console.log(loggedInUser);
+
+
+  // selector
+
+ const cartItems = useSelector((store)=> store.cart.items);
+ console.log(cartItems);
 
   return (
     <div className="flex items-center justify-between px-4 bg-cyan-400">
@@ -34,7 +42,9 @@ const HeaderComponent = () => {
           <li className="font-bold hover:text-slate-300">
             <Link to={"/grocery"}>Grocery</Link>
           </li>
-          <li className="font-bold hover:text-slate-300">Cart</li>
+          <li className="font-bold hover:text-slate-300">
+            <Link to={"/cart"}>Cart-({cartItems.length})</Link>
+          </li>
 
           <button
             className="font-bold hover:text-slate-300"

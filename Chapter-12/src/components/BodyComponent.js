@@ -16,7 +16,8 @@ const BodyComponent = () => {
   const fetchRestlistData = async () => {
     const reslistData = await fetch(RESLIST_API);
     const json = await reslistData.json();
-
+    console.log(json);
+   
     setListOfRestaurants(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );

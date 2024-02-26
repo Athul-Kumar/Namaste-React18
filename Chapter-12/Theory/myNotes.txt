@@ -1,0 +1,14 @@
+
+
+redux performance
+
+1.always specify exact slice and portion while using useSelector() for reading the data
+2. reducers vs reducer
+    a.reducers --> in slice multiple reducers for performing different tasks
+    b.reducer --> in store only one reducer for the store which contains multiple
+                  small reducers like cart, auth etc
+
+3.old Redux ==> dont allow us to mutate the state
+  new Redux ==> will say please mutate the state
+                behind the scene redux is mutating the state by itself by the help of immerjs library
+                
